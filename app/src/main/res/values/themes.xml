@@ -1,0 +1,7 @@
+<resources>
+
+    <style name="Theme.Example.Leanback" parent="Theme.AppCompat.Light.NoActionBar">
+
+
+    </style>
+</resources>

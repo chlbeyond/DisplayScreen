@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.chl.displayscreen.activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="彩虹云宝"
+            android:textColor="#6CBB9D"
+            android:textSize="30sp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E-Screen客户端"
+            android:textColor="#434343"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="请选择图片进行展示"
+        android:textColor="@android:color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="当前路径："
+            android:textColor="#4F4F4F" />
+
+        <TextView
+            android:id="@+id/path_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical"
+        android:padding="2dp"
+        android:background="@drawable/border_bg">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/dissConnect_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/refresh"/>
+
+            <TextView
+                android:id="@+id/refreshTip_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="无法连接服务器，请刷新重试"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <GridView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="90dp"
+            android:numColumns="auto_fit"
+            android:gravity="center"
+            android:verticalSpacing="8dp"
+            android:horizontalSpacing="10dp"
+            android:stretchMode="columnWidth"
+            android:fadeScrollbars="false" />
+
+        <com.chl.displayscreen.commonView.DialogImageView.MyGridView
+            android:id="@+id/gridView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fadeScrollbars="false"
+            android:listSelector="@drawable/gridview_item_selector"/>
+
+        <com.chl.displayscreen.commonView.ProgressView.DonutProgress
+            android:id="@+id/donut_progress"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#0066FF"
+            android:backgroundTintMode="add"
+            custom:donut_finished_color="#0066FF"
+            custom:donut_finished_stroke_width="5dp"
+            custom:donut_show_text="true"
+            custom:donut_unfinished_color="@color/primary_material_light"
+            custom:donut_unfinished_stroke_width="5dp" />
+
+        <!--<ListView-->
+        <!--android:id="@+id/listView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:fadeScrollbars="false"/>-->
+    </RelativeLayout>
+</LinearLayout>
